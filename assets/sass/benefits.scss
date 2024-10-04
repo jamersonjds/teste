@@ -1,0 +1,122 @@
+section.benefits {
+    margin-top: 3rem;
+
+    section.limit-width {
+        max-width: 1440px;
+    }
+
+    h3 {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+
+        span {
+            color: #9c0001;
+        }
+    }
+
+    div.container-grid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        overflow: hidden;
+
+        ul.medals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            height: 40vh;
+            max-width: 25rem;
+
+            li {
+                display: flex;
+                align-items: end;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                span {
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                &:first-child {
+                    span {
+                        height: 33%;
+                        background-color: #ED9D5D;
+                    }
+                }
+
+                &:nth-child(2) {
+                    span {
+                        height: 66%;
+                        background-color: #E4E7E7;
+                    }
+                }
+
+                &:last-child {
+                    span {
+                        height: 100%;
+                        background-color: #EFC75E;
+                    }
+                }
+            }
+        }
+
+        ul.text-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+
+            li {
+                display: flex;
+
+                >span {
+                    color: #9c0001;
+                    font-size: 2rem;
+                }
+
+                div.text {
+                    p {
+                        line-height: 1.5rem;
+
+                        strong {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section.benefits {
+        display: flex;
+        justify-content: center;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        div.container-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: start;
+
+            ul.text-benefits {
+                margin-top: 0;
+            }
+        }
+    }
+}

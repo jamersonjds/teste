@@ -1,0 +1,44 @@
+section.apresentation {
+    display: none;
+}
+@media screen and (min-width: 992px) {
+    section.apresentation {
+        background-color: #252525;
+        display: flex;
+        justify-content: center;
+
+        section.limit-width {
+            width: 100%;
+            max-width: 1440px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ul.grid-apresentation {
+                display: flex;
+                justify-content: space-around;
+                gap: 2rem;
+
+                > li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7rem;
+
+                    span {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+
+                    * {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
